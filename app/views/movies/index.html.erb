@@ -1,0 +1,13 @@
+<h1>Index movies</h1>
+
+<ul>
+  <% @movies.each do |movie| %>
+    <li>
+      <%= link_to "The movie", movie %>
+      <%=  movie.title %>
+      <%= movie.overview %>
+
+      </a>
+    </li>
+  <% end %>
+</ul>

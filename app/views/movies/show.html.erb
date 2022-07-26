@@ -2,4 +2,10 @@
 <h2><%= @movie.title %></h1>
 <p><%= @movie.overview %></p>
 <p><%= @movie.rating %></p>
-<%= link_to "The movie", movies_path %>
+<%= link_to "Back to index", movies_path %>
+<div>
+<%= link_to "Edit the movie", edit_movie_path %>
+</div>
+<div>
+<%= link_to 'Delete the movie', movie_path(@movie), method: :delete, data: {confirm: "Are you sure?"} %>
+</div>

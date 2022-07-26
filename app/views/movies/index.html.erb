@@ -1,13 +1,25 @@
 <h1>Index movies</h1>
 
 <ul>
-  <% @movies.each do |movie| %>
-    <li>
-      <%= link_to "The movie", movie %>
-      <%=  movie.title %>
-      <%= movie.overview %>
 
-      </a>
+  <% @movies.each do |movie| %>
+    <br>
+    <li><%= link_to "The movie", movie %>, <strong>id : <%= movie.id %></strong></li>
+    <li><%=  movie.title %></li>
+    <li><%= movie.overview %></li>
+    <li><img src="<%= movie.poster_url %>" width=200px></li>
+    <li>Movie rating : <%= movie.rating %></li>
+    <li><a href="<%= movie.poster_url %>" target=_blank>Full Size Poster</a></li>
+    <li><%= link_to "Edit the movie", edit_movie_path(movie) %></li>
+    <li><%= link_to "Delete the movie", movie_path(movie), method: :delete, data: {confirm: "Are you sure?"} %>
     </li>
+     </div>
   <% end %>
+ 
+
 </ul>
+
+<%= link_to "New Movie", new_movie_path %>
+<div>
+<a href="https://www.rubyguides.com/2019/05/rails-link_to-method/" target=_blank >lient test</a>
+</div>

@@ -1,0 +1,20 @@
+<h1> Edit the movie</h1>
+
+<h2> Movie selected : </h2>
+<ul>
+    <%= @movie.title %>
+    <%= @movie.overview %>
+    <%= @movie.poster_url %>
+    <%= @movie.rating%>
+</ul>
+<h3>Please update the info by filling this form</h3>
+
+<%= simple_form_for @movie do |f| %>
+  <%= f.input :title %>
+  <%= f.input :overview %>
+  <%= f.input :poster_url %>
+  <%= f.input :rating %>
+  <%= f.button :submit %>
+<% end %>
+
+<%= link_to "Back to index", movies_path %>

@@ -1,0 +1,13 @@
+<h1>Edit the list</h1>
+<h2> List selected : </h2>
+<ul>
+    <%= @list.name %>
+</ul>
+
+<h3>Please update the info by filling this form</h3>
+<%= simple_form_for @list do |f| %>
+  <%= f.input :name %>
+  <%= f.button :submit %>
+<% end %>
+
+<%= link_to "Back to list index", lists_path %>

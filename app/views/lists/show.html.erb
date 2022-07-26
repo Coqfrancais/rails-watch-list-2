@@ -1,0 +1,12 @@
+<h1>Show index</h1>
+
+<%= @list.name %>
+<div>
+<%= link_to "Back to list index", lists_path %>
+</div>
+<div>
+<%= link_to "udpate the list", edit_list_path %>
+</div>
+<div>
+<%= link_to 'Delete this list', list_path(@list), method: :delete, data: {confirm: "Are you sure?"} %>
+</div>
